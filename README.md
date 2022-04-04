@@ -1,6 +1,6 @@
 # Hill Cipher
 
-- This README is in works. Some details may **not** be more fully described at this time.
+- This README is in works. Some details may **not** be fully described at this time.
 
 This program encrypts the alphabetic letters in a file using the Hill cipher where the Hill matrix can be any size from 2 x 2 up to 9 x 9.
 
