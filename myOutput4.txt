@@ -1,0 +1,16 @@
+
+
+Key matrix:
+
+3  5
+7  8
+
+
+Plaintext:
+
+todayiwenttothestoretoseeafamousauthor
+
+
+Ciphertext:
+
+xljviyieejxlohyqxltvxlwcmcpjcouyweohxa

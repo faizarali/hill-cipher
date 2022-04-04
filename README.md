@@ -74,4 +74,3 @@ Python program:
 prompt> python3 hillcipher.py k6.txt p6.txt
 ```
 Also included is a bash shell script called `hillcipher-tester.sh`, which will test the source code with a number of key files and plaintext file to a corresponding sample output of those files.
-# hill-cipher

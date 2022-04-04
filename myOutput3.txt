@@ -1,0 +1,17 @@
+
+
+Key matrix:
+
+1  4  0
+7  11  2
+0  5  1
+
+
+Plaintext:
+
+timetostudyfinalsarecomingsummerplansxx
+
+
+Ciphertext:
+
+zlacffqllvjvirnfpmhlwkmqllwqkuulwlzngji
