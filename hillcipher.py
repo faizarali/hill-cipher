@@ -2,7 +2,7 @@
 # cipher where the Hill matrix can be any size from 2 x 2 up to 9 x 9.
 import sys
 
-# First command line parameters will be the "encryption key file".
+# First command line parameter will be the "encryption key file".
 with open(sys.argv[1], 'r') as key_file:
     key = key_file.read().split()
 
@@ -25,7 +25,7 @@ print('\n'.join(['  '.join([str(cell) for cell in row]) for row in key_matrix]))
 print()
 print()
 
-# Second command line parameters will be the file to be encrypted.
+# Second command line parameter will be the file to be encrypted.
 with open(sys.argv[2], 'r') as plaintext_file:
     plaintext = plaintext_file.read().replace('\n', '').replace(' ', '')
 
