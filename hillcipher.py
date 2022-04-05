@@ -2,9 +2,18 @@
 # cipher where the Hill matrix can be any size from 2 x 2 up to 9 x 9.
 import sys
 
-# First command line parameter will be the "encryption key file".
-with open(sys.argv[1], 'r') as key_file:
-    key = key_file.read().split()
+try:
+    # First command line parameter will be the "encryption key file".
+    with open(sys.argv[1], 'r') as key_file:
+        key = key_file.read().split()
+
+    # Second command line parameter will be the file to be encrypted.
+    with open(sys.argv[2], 'r') as plaintext_file:
+        plaintext = plaintext_file.read().replace('\n', '').replace(' ', '')
+
+except:
+    print("You didn't include the correct command line arguments!")
+    sys.exit(1)
 
 # Get the first integer from the key text file. This will determine the
 # size of our key matrix (it will be n by n dimensions).
@@ -24,10 +33,6 @@ key_matrix = [list(map(int, i)) for i in key_matrix]
 print('\n'.join(['  '.join([str(cell) for cell in row]) for row in key_matrix]))
 print()
 print()
-
-# Second command line parameter will be the file to be encrypted.
-with open(sys.argv[2], 'r') as plaintext_file:
-    plaintext = plaintext_file.read().replace('\n', '').replace(' ', '')
 
 # We only care about the alphabetic letters in our plaintext.
 plaintext = ''.join(filter(str.isalpha, plaintext))
