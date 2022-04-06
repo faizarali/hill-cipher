@@ -57,3 +57,8 @@ echo "Case #6"
 eval $EXE k6.txt p6.txt > myOutput6.txt
 diff myOutput6.txt sample_output/k6p6.txt
 echo "Case #6 - complete"
+
+echo "Case #7"
+eval $EXE k7.txt p7.txt > myOutput7.txt
+diff myOutput7.txt sample_output/k7p7.txt
+echo "Case #7 - complete"
