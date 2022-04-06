@@ -11,13 +11,14 @@ try:
     with open(sys.argv[2], 'r') as plaintext_file:
         plaintext = plaintext_file.read().replace('\n', '').replace(' ', '')
 
+    # Get the first integer from the key text file. This will determine the
+    # size of our key matrix (it will be n by n dimensions).
+    n = int(key[0])
+
 except:
     print("You didn't include the correct command line arguments!")
     sys.exit(1)
 
-# Get the first integer from the key text file. This will determine the
-# size of our key matrix (it will be n by n dimensions).
-n = int(key[0])
 print()
 print()
 
