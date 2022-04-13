@@ -40,7 +40,8 @@ plaintext = ''.join(filter(str.isalpha, plaintext))
 
 # Pad with X until plaintext is a multiple of key size.
 while len(plaintext) % n != 0:
-    plaintext = plaintext + 'X'
+    # plaintext = plaintext + 'X'
+    plaintext = ''.join([plaintext, 'X'])
 
 # We are only dealing with lowercase letters for this program.
 plaintext = plaintext.lower()
@@ -67,14 +68,15 @@ print()
 print('Ciphertext:')
 print()
 
-# Making our encrypted string (aka our ciphertext)
+# Making our encrypted string (aka our ciphertext).
 def encrypt(plaintext):
     res = ""
     for i in range(0, len(plaintext), n):
-        res = res + encrypt_block(plaintext[i:i+n])
+        # res = res + encrypt_block(plaintext[i:i+n])
+        res = ''.join([res, encrypt_block(plaintext[i:i+n])])
     return res
 
-# Matrix Multiplication with the given block
+# Matrix Multiplication with the given block.
 def encrypt_block(block):
     res = ['0'] * n
     for row in range(n):
