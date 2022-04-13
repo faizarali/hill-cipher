@@ -87,6 +87,3 @@ def encrypt_block(block):
     return ''.join(res)
 
 printToConsole(encrypt(plaintext))
-
-key_file.close()
-plaintext_file.close()
