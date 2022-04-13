@@ -32,7 +32,7 @@ test_case_num=7
 
 for ((i = 1; i <= test_case_num; i++))
 do
-	echo "Case #$i"
+    echo "Case #$i"
     eval $EXE k$i.txt p$i.txt > myOutput$i.txt
     diff myOutput$i.txt sample_output/k${i}p${i}.txt
     echo "Case #$i - complete"
