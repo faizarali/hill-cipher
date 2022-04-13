@@ -2,11 +2,11 @@ import sys
 import subprocess
 import shlex
 
-def compile_java(java_file):
-    cmd = 'javac ' + java_file
+def compile_c(c_file):
+    cmd = 'gcc ' + c_file
     process = subprocess.Popen(shlex.split(cmd))
     process.wait()
-    return "java hillcipher"
+    return "./a.out"
 
 def compile_cpp(cpp_file):
     cmd = 'g++ ' + cpp_file
@@ -14,11 +14,11 @@ def compile_cpp(cpp_file):
     process.wait()
     return "./a.out"
 
-def compile_c(c_file):
-    cmd = 'gcc ' + c_file
+def compile_java(java_file):
+    cmd = 'javac ' + java_file
     process = subprocess.Popen(shlex.split(cmd))
     process.wait()
-    return "./a.out"
+    return "java hillcipher"
 
 def compile_go(go_file):
     cmd = 'go build ' + go_file
@@ -49,8 +49,10 @@ else:
     print("Invalid source file name")
     sys.exit(1)
 
+test_case_num = 7
+
 # Accounts for seven test cases
-for i in range(1, 8):
+for i in range(1, test_case_num + 1):
     print(f"Case #{i}")
     input = EXE + f' k{i}.txt p{i}.txt'
     command = shlex.split(input)
