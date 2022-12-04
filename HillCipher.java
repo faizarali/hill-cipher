@@ -41,6 +41,8 @@ class HillCipher {
                 matrix[i][j] = scanner.nextInt();
             }
         }
+        
+        scanner.close();
 
         System.out.println("Key matrix:");
         System.out.println();
